@@ -18,8 +18,6 @@ The repository code base uses [DrWatson](https://juliadynamics.github.io/DrWatso
 
 > causal-inference-short-course
 
-It is authored by tmichoel.
-
 To (locally) reproduce this project, do the following:
 
 1. Download this code base or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! Notice that raw data are typically not included in the git-history and may need to be downloaded independently. 
