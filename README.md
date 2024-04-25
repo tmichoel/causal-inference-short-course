@@ -14,7 +14,7 @@ The example notebooks are written in [Julia][1], but should be easily translatab
 
 Follow the instructions on the [MIT Introduction to Computational Thinking course](https://computationalthinking.mit.edu/Fall23/installation/) to install [Julia][1] and [Pluto][3]. Optionally create an account on [JuliaHUb](https://juliahub.com/) if you want to explore a cloud-based [Julia][1] platform.
 
-The repository code base uses the [Julia Language](https://julialang.org/) and [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/) to make a reproducible scientific project named
+The repository code base uses [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/) to make a reproducible scientific project named
 
 > causal-inference-short-course
 
