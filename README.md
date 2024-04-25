@@ -8,9 +8,11 @@ The example notebooks are written in [Julia][1], but should be easily translatab
 - [Julia: come for the syntax, stay for the speed](https://www.nature.com/articles/d41586-019-02310-3)
 - [Julia for biologists](https://www.nature.com/articles/s41592-023-01832-z)
 
+[Julia][1] is also the language behind [PumasAI](https://pumas.ai/).
+
 ## Software installation
 
-Follow the instructions on the [MIT Introduction to Computational Thinking course](https://computationalthinking.mit.edu/Fall23/installation/) to install [Julia][1] and [Pluto][3].
+Follow the instructions on the [MIT Introduction to Computational Thinking course](https://computationalthinking.mit.edu/Fall23/installation/) to install [Julia][1] and [Pluto][3]. Optionally create an account on [JuliaHUb](https://juliahub.com/) if you want to explore a cloud-based [Julia][1] platform.
 
 The repository code base uses the [Julia Language](https://julialang.org/) and [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/) to make a reproducible scientific project named
 
