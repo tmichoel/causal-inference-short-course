@@ -12,8 +12,6 @@ The example notebooks are written in [Julia][1], but should be easily translatab
 
 Follow the instructions on the [MIT Introduction to Computational Thinking course](https://computationalthinking.mit.edu/Fall23/installation/) to install [Julia][1] and [Pluto][3].
 
- [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the [BINF301-code repository](https://github.com/tmichoel/BINF301-ML-for-sysbio-code) and follow the installation instructions. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date!
-
 The repository code base uses the [Julia Language](https://julialang.org/) and [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/) to make a reproducible scientific project named
 
 > causal-inference-short-course
@@ -22,8 +20,8 @@ It is authored by tmichoel.
 
 To (locally) reproduce this project, do the following:
 
-0. Download this code base or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Notice that raw data are typically not included in the git-history and may need to be downloaded independently.
-1. Open a Julia console and do:
+1. Download this code base or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! Notice that raw data are typically not included in the git-history and may need to be downloaded independently. 
+2. Open a Julia console and do:
    ```
    julia> using Pkg
    julia> Pkg.add("DrWatson") # install globally, for using `quickactivate`
