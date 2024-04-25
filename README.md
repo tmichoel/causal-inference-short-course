@@ -1,6 +1,29 @@
 # Causal Inference in Drug Discovery Short Course
 
-This repository will contain lecture notes and example notebooks for the short course on causal inference in drug discovery during the [NOVAMATH Thematic Weeks 2024](https://eventos.fct.unl.pt/novamath_thematic_weeks/).
+This repository will contain lecture notes and example notebooks for the short course on causal inference in drug discovery during the [NOVAMATH Thematic Weeks 2024](https://eventos.fct.unl.pt/novamath_thematic_weeks/). 
+
+## Course content
+
+The course will roughly follow our [review on causal inference in drug discovery and development](https://doi.org/10.1016/j.drudis.2023.103737). To discover new drugs is to seek and prove causality. Causal inference combines model and data to identify causations from correlations and is indispensable for  intervention, "what if" questions, and understanding. 
+
+The first part of the course will introduce the basic concepts of causal modelling with directed acyclic graphs (DAGs), the identification and estimation of causal effects, and causal model selection. The second part of the course will focus on learning large-scale causal Bayesian networks from population genomics data and controlled perturbation experiments, and how such networks are used to understand mechanisms, identify candidate targets, and discover drug repurposing opportunities.
+
+List of planned topics:
+
+- What is causal inference?
+- Causal inference with DAGs
+- Common structural motifs in DAGs and how to interpret them
+- Causal effect identification using the backdoor and frontdoor criteria
+- Causal effect estimation from data
+- Statistical model selection
+- Mendelian randomization
+- Bayesian network learning
+- Population genomics data resources
+- Controlled perturbation experiments resources
+- Drug repurposing methods
+
+
+## Software installation
 
 The example notebooks are written in [Julia][1], but should be easily translatable to other languages. [Julia][1] is an open-source programming language that combines the interactivity of [Python](https://www.python.org/), [R](https://www.r-project.org/) and [Matlab](https://mathworks.com), with the speed of [C](https://en.wikipedia.org/wiki/C_(programming_language)). Read more about its design principles and why it is good for scienticific applications, including computational biology here:
 
@@ -10,7 +33,6 @@ The example notebooks are written in [Julia][1], but should be easily translatab
 
 [Julia][1] is also the language behind [PumasAI](https://pumas.ai/).
 
-## Software installation
 
 Follow the instructions on the [MIT Introduction to Computational Thinking course](https://computationalthinking.mit.edu/Fall23/installation/) to install [Julia][1] and [Pluto][3]. Optionally create an account on [JuliaHUb](https://juliahub.com/) if you want to explore a cloud-based [Julia][1] platform.
 
