@@ -1,7 +1,10 @@
 name = "causal-inference-short-course"
 authors = ["tmichoel"]
-[compat]
-julia = "1.10.0"
-DrWatson = "2.14.0"
+
 [deps]
 DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+
+[compat]
+DrWatson = "2.14.0"
+julia = "1.10.0"
