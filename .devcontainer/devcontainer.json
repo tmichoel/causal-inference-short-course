@@ -6,8 +6,7 @@
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
-			"installJupyterlab": "true",
-            "configureJupyterlabAllowOrigin": "*"
+			"installJupyterlab": "true"
 		},
 		"ghcr.io/julialang/devcontainer-features/julia:1": {}
 	}
