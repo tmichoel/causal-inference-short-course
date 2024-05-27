@@ -4,11 +4,11 @@
 	"name": "Ubuntu",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-	"settings": {
-        	"python.installJupyterLab": true
-    	},
 	"features": {
-		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installJupyterlab": "true",
+            "configureJupyterlabAllowOrigin": "*"
+		},
 		"ghcr.io/julialang/devcontainer-features/julia:1": {}
 	}
 
