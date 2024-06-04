@@ -49,7 +49,7 @@ It is probably wise to **rename the notebook files**. This will avoid conflicts 
 ### Run Julia and instantiate (precompile) this project
 
 > [!IMPORTANT]  
-> This step needs to be executed only one. It is the only time-consuming step and it is recommended to do this **before the start of the course**!
+> This step needs to be executed only once. It is the only time-consuming step and it is recommended to do this **before the start of the course**!
 
 The repository code base uses [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/) to make a reproducible scientific project named
 
