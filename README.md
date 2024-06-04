@@ -34,13 +34,11 @@ The example notebooks are written in [Julia][1], an open-source programming lang
 [Julia][1] is also the language behind [PumasAI](https://pumas.ai/).
 
 
-### Local installation
-
-#### Install Julia
+### Install Julia
 
 Follow the [installation instructions](https://github.com/JuliaLang/juliaup).
 
-#### Clone or fork the repository
+### Clone or fork the repository
 
 Download this code base or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! Notice that raw data are typically not included in the git-history and need to be downloaded independently. 
 
@@ -48,7 +46,7 @@ It is probably wise to **rename the notebook files**. This will avoid conflicts 
 
 
 
-#### Run Julia and instantiate (precompile) this project
+### Run Julia and instantiate (precompile) this project
 
 > [!IMPORTANT]  
 > This step needs to be executed only one. It is the only time-consuming step and it is recommended to do this **before the start of the course**!
@@ -78,7 +76,7 @@ using DrWatson
 ```
 which auto-activate the project and enable local path handling from DrWatson.
 
-#### Run Julia and start JupyterLab
+### Run Julia and start JupyterLab
 
 The previous step needs to be executed only once. For all subsequent sessions:
 
