@@ -93,3 +93,14 @@ This should start a familiar [JupyterLab](https://jupyterlab.readthedocs.io/) se
 [1]: https://julialang.org/
 [2]: https://plutojl.org/
 [3]: https://juliahub.com/
+
+## Data download
+
+Download toy data from [this OneDrive link](https://universityofbergen-my.sharepoint.com/:f:/g/personal/tom_michoel_uib_no/En9yoe7k-ZFDv7K53FbOnHQB4v1tMCnBKg_lQF1iBM-4mQ?e=ZiKi4l).
+
+The files in this folder should be stored exactly in the location:
+
+```
+path/to/this/project/data/processed/findr-data-geuvadis
+```
+
