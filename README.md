@@ -39,7 +39,7 @@ To run the notebooks, you have two options:
 - Install Julia and reproduce the state of this repository locally
 
 > [!IMPORTANT]  
-> If you don't have a Github account yet, you need to [sign up](https://github.com/signup) for one. Note that Github offers [extra benefits to registered students](https://github.com/edu/students):
+> If you don't have a Github account yet, you need to [sign up](https://github.com/signup) for one. Note that Github offers [extra benefits to registered students](https://github.com/edu/students).
 
 ### Using Github Codespaces
 
@@ -147,3 +147,7 @@ The files in this folder should be stored exactly in the location:
 path/to/this/project/data/processed/findr-data-geuvadis
 ```
 
+If you are using a Github Codespace, first download the data on your local computer, then follow these instructions:
+
+1. Create a folder structure **data/processed/findr-data-geuvadis** in the [JupyterLab file browser](https://jupyterlab.readthedocs.io/en/stable/user/files.html)
+2. Upload the files in the newly created folder by [clicking the "Upload Files" button at the top of the file browser](https://jupyterlab.readthedocs.io/en/stable/user/files.html#uploading-and-downloading).
