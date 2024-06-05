@@ -25,6 +25,8 @@ List of planned topics:
 
 ## Software installation
 
+### Introduction
+
 The example notebooks are written in [Julia][1], an open-source programming language that combines the interactivity of [Python](https://www.python.org/), [R](https://www.r-project.org/) and [Matlab](https://mathworks.com), with the speed of [C](https://en.wikipedia.org/wiki/C_(programming_language)). Read more about its design principles and why it is good for scientific applications, including computational biology here:
 
 - [Why we created Julia](https://julialang.org/blog/2012/02/why-we-created-julia/)
@@ -41,6 +43,14 @@ To run the notebooks, you have two options:
 > [!IMPORTANT]  
 > If you don't have a Github account yet, you need to [sign up](https://github.com/signup) for one. Note that Github offers [extra benefits to registered students](https://github.com/edu/students).
 
+### Fork the repository
+
+[Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! 
+
+> [!TIP]
+> Before you do anything else, it is recommended to **make a copy of the notebook files**. Keep the original ones untouched and only work in your copies. This will avoid conflicts between your and my changes when you [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+
+
 ### Using Github Codespaces
 
 #### **Create you Codespace**
@@ -48,20 +58,24 @@ To run the notebooks, you have two options:
 > [!IMPORTANT]  
 > This step takes quite some time and it is recommended to do this **before the start of the course**!
 
-1. On the [repository homepage](https://github.com/tmichoel/causal-inference-short-course), find the **Use this template button** (top right of the page), and select **Open in a codespace**.
-2. A new [Visual Studio Code](https://code.visualstudio.com/) window will open in the browser. A Terminal named "Github Codespaces: Details" may appear showing lots of commands being executed.
-3. Now would be a good time to go for a :coffee:
-4. Once the Codespace creation has concluded, the window can be safely closed.
+1. Go to your forked repository's homepage.
+2. Click the little triangle on the **Code** button and select **Codespaces** (see screenshot).
+3. Click Click on the `...` on the right-hand side to open a menu and select **New with options** (see screenshot).
+4. Keep the settings or change the machine type if you wish (2-core should be sufficient) and click **Create codespace**.
+5. A new [Visual Studio Code](https://code.visualstudio.com/) window will open in the browser. A Terminal named "Github Codespaces: Details" may appear showing lots of commands being executed.
+6. Now would be a good time to go for a :coffee:
+7. Once the Codespace creation has concluded, the window can be safely closed.
 
-
+![Github create codespace screenshot](github-create-codespace-screenshot.png)
 
 #### **Use your Codespace **
 
-1. Go to [github.com/codespaces](https://github.com/codespaces). In the left-hand menu, you should see an entry **Created from a template**. Click on it.
-2. Click on the `...` on the right-hand side to open a menu (see figure).
-3. Click **Open in JupyterLab**
+1. Repeat steps 1 and 2 above.
+2. You should now see your newly created codespace (see screenshot).
+3. Click on the `...` next to it to open a menu (see screenshot).
+4. Click **Open in JupyterLab** (see screenshot)
 
-![Github Codespaces screenshot](github-codespaces-screenshot.png)
+![Github open codespace screenshot](github-open-codespace-screenshot.png)
 
 > [!IMPORTANT]  
 > Remember to click **Stop codespace** in the same menu (see figure) between sessions, otherwise it will keep running in the background and use up your free quota of compute time. When you come back for the next session, you can simply click **Open in JupyterLab** again to resume your work.
@@ -69,19 +83,8 @@ To run the notebooks, you have two options:
 > [!WARNING]
 > Do not use the *Delete* button, otherwise you will lose any changes *and* have to create a new Codespace.
 
-> [!TIP]
-> It is recommended to **make a copy of the notebook files** before you start working with them. This will allow to pull any updates I make to the repository into your codespace without any merge conflicts.
 
 ### Local installation
-
-
-#### **Clone or fork the repository**
-
-Download this code base or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! Notice that raw data are typically not included in the git-history and need to be downloaded independently. 
-
-> [!TIP]
-> It is recommended to **make a copy of the notebook files** before you start working with them. This will avoid conflicts between your and my changes when you [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
-
 
 
 #### **Install Julia**
