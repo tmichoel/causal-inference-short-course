@@ -78,7 +78,7 @@ To run the notebooks, you have two options:
 ![Github open codespace screenshot](github-open-codespace-screenshot.png)
 
 > [!IMPORTANT]  
-> Remember to click **Stop codespace** in the same menu (see figure) between sessions, otherwise it will keep running in the background and use up your free quota of compute time. When you come back for the next session, you can simply click **Open in JupyterLab** again to resume your work.
+> Remember to click **Stop codespace** in the same menu between sessions, otherwise it will keep running in the background and use up your free quota of compute time. When you come back for the next session, you can simply click **Open in JupyterLab** again to resume your work.
 
 > [!WARNING]
 > Do not use the *Delete* button, otherwise you will lose any changes *and* have to create a new Codespace.
