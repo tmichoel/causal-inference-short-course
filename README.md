@@ -75,7 +75,7 @@ To run the notebooks, you have two options:
 ### Local installation
 
 
-### **Clone or fork the repository**
+#### **Clone or fork the repository**
 
 Download this code base or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! Notice that raw data are typically not included in the git-history and need to be downloaded independently. 
 
