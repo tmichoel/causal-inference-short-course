@@ -68,7 +68,7 @@ To run the notebooks, you have two options:
 
 ![Github create codespace screenshot](github-create-codespace-screenshot.png)
 
-#### **Use your Codespace **
+#### **Use your Codespace**
 
 1. Repeat steps 1 and 2 above.
 2. You should now see your newly created codespace (see screenshot).
