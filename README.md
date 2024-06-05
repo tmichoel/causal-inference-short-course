@@ -33,20 +33,63 @@ The example notebooks are written in [Julia][1], an open-source programming lang
 
 [Julia][1] is also the language behind [PumasAI](https://pumas.ai/).
 
+To run the notebooks, you have two options:
 
-### Install Julia
+- Run everything inside a [Github Codespace](https://github.com/features/codespaces)
+- Install Julia and reproduce the state of this repository locally
 
-Follow the [installation instructions](https://github.com/JuliaLang/juliaup).
+> [!IMPORTANT]  
+> If you don't have a Github account yet, you need to [sign up](https://github.com/signup) for one. Note that Github offers [extra benefits to registered students](https://github.com/edu/students):
 
-### Clone or fork the repository
+### Using Github Codespaces
+
+#### **Create you Codespace**
+
+> [!IMPORTANT]  
+> This step takes quite some time and it is recommended to do this **before the start of the course**!
+
+1. On the [repository homepage](https://github.com/tmichoel/causal-inference-short-course), find the **Use this template button** (top right of the page), and select **Open in a codespace**.
+2. A new [Visual Studio Code](https://code.visualstudio.com/) window will open in the browser. A Terminal named "Github Codespaces: Details" may appear showing lots of commands being executed.
+3. Now would be a good time to go for a :coffee:
+4. Once the Codespace creation has concluded, the window can be safely closed.
+
+
+
+#### **Use your Codespace **
+
+1. Go to [github.com/codespaces](https://github.com/codespaces). In the left-hand menu, you should see an entry **Created from a template**. Click on it.
+2. Click on the `...` on the right-hand side to open a menu (see figure).
+3. Click **Open in JupyterLab**
+
+![Github Codespaces screenshot](github-codespaces-screenshot.png)
+
+> [!IMPORTANT]  
+> Remember to click **Stop codespace** in the same menu (see figure) between sessions, otherwise it will keep running in the background and use up your free quota of compute time. When you come back for the next session, you can simply click **Open in JupyterLab** again to resume your work.
+
+> [!WARNING]
+> Do not use the *Delete* button, otherwise you will lose any changes *and* have to create a new Codespace.
+
+> [!TIP]
+> It is recommended to **make a copy of the notebook files** before you start working with them. This will allow to pull any updates I make to the repository into your codespace without any merge conflicts.
+
+### Local installation
+
+
+### **Clone or fork the repository**
 
 Download this code base or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! Notice that raw data are typically not included in the git-history and need to be downloaded independently. 
 
-It is probably wise to **rename the notebook files**. This will avoid conflicts between your and my changes when you [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+> [!TIP]
+> It is recommended to **make a copy of the notebook files** before you start working with them. This will avoid conflicts between your and my changes when you [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
 
 
-### Run Julia and instantiate (precompile) this project
+#### **Install Julia**
+
+Follow the [installation instructions](https://github.com/JuliaLang/juliaup).
+
+
+#### **Run Julia and instantiate (precompile) this project**
 
 > [!IMPORTANT]  
 > This step needs to be executed only once. It is the only time-consuming step and it is recommended to do this **before the start of the course**!
@@ -76,7 +119,7 @@ using DrWatson
 ```
 which auto-activate the project and enable local path handling from DrWatson.
 
-### Run Julia and start JupyterLab
+#### **Run Julia and start JupyterLab**
 
 The previous step needs to be executed only once. For all subsequent sessions:
 
