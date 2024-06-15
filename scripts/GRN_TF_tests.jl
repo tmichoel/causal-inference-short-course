@@ -94,3 +94,11 @@ dP_reg = filter(row -> row.Target in regulators, dP)
 
 # create DAG from dP
 G = dagfindr!(dP);
+G_reg = dagfindr!(dP_reg);
+
+# filter out rows that are noi inDAG in dP_reg
+filter!(row -> row.inDAG_greedy_edges==true, dP_reg)
+
+# write dP and dP_reg to files in csv format
+CSV.write(datadir("results","findr-data-geuvadis", "dP.csv"), dP)
+CSV.write(datadir("results","findr-data-geuvadis", "dP_reg.csv"), dP_reg)
