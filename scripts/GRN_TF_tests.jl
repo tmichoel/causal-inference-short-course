@@ -10,15 +10,20 @@ using BioFindr
 using Printf
 using Statistics
 using MultivariateStats
+using Graphs
 
 # Load data
 dt = DataFrame(Arrow.Table(datadir("processed","findr-data-geuvadis", "dt.arrow")));
 dgt = DataFrame(Arrow.Table(datadir("processed","findr-data-geuvadis", "dgt.arrow")))
 dpt = DataFrame(SNP_ID = names(dgt), GENE_ID=names(dt)[1:ncol(dgt)]);
 
+dm = DataFrame(Arrow.Table(datadir("processed","findr-data-geuvadis", "dm.arrow")));
+dgm = DataFrame(Arrow.Table(datadir("processed","findr-data-geuvadis", "dgm.arrow")));
+dpm = DataFrame(SNP_ID = names(dgm), miRNA_ID=names(dm)[1:ncol(dgm)]);
+
 # Load the list of TFs, downloaded from https://humantfs.ccbr.utoronto.ca/allTFs.php")))
 TFs = DataFrame(CSV.File(datadir("processed","findr-data-geuvadis", "TF_names_v_1.01.txt"), header=false))
-rename!(TFs, [:"Column1" => :GeneName])
+rename!(TFs, :"Column1" => :GENE_ID)
 
 # how many are in dt?
 length(intersect(TFs.GeneName, names(dt)))
@@ -26,23 +31,12 @@ length(intersect(TFs.GeneName, names(dt)))
 # how many have eqtls?
 length(intersect(TFs.GeneName, names(dt)[1:ncol(dgt)]))
 
-# print TF names in dt to a file
-oname = datadir("processed","findr-data-geuvadis", "TF_names.txt")
-open(oname, "w") do io
-    for i in intersect(TFs.GeneName, names(dt))
-        println(io, i)
-    end
-end
 
-# find TFs with eQTLs
-TF_eqtls = intersect(TFs.GeneName, names(dt)[1:ncol(dgt)])
 
-# select only the TFs with eQTLs from dpt
-dpt_TF = dpt[findall(x -> x in TF_eqtls, dpt.GENE_ID), :]
 
-dP = findr(dt, dgt, dpt_TF; FDR=0.2)
+dP_TF_mRNA = findr(dt, dgt, dpt; namesX=TFs.GENE_ID, FDR=0.2)
 
-gdf = groupby(dP, :Source);
+gdf = groupby(dP_TF_mRNA, :Source);
 
 cdf = unstack(sort!(combine(gdf, nrow),:nrow, rev=true), :Source, :nrow)
 
@@ -84,3 +78,19 @@ for k in eachindex(gdf)
         println(gdf[k].Source[1], "\t", length(tgts), "\t", cc)
     end
 end
+
+dP_miRNA_miRNA = findr(dm, dgm, dpm; FDR=0.2)
+dP_TF_miRNA = findr(dm, dt, dgt, dpt; namesX=TFs.GENE_ID, FDR=0.2)
+dP_miRNA_mRNA = findr(dt, dm, dgm, dpm; FDR=0.2)
+
+# merge the dP dataframes and revers sort by Probability
+dP = sort!(vcat(dP_TF_mRNA, dP_miRNA_miRNA, dP_TF_miRNA, dP_miRNA_mRNA), :Probability, rev=true)
+
+# define regulators as the unique elements of dP.Source
+regulators = unique(dP.Source)
+
+# define a new dataframe keeping only rows where Target is in regulators
+dP_reg = filter(row -> row.Target in regulators, dP)
+
+# create DAG from dP
+G = dagfindr!(dP);
