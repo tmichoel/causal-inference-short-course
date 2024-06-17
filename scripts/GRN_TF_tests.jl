@@ -65,6 +65,18 @@ Yt = BioFindr.supernormalize(dt)
 # compute the first three principal components of the expression data Yt
 M = fit(PCA, Yt; maxoutdim=3)
 
+# define "phenotypes" as the first three principal components of the expression data
+phenotypes = projection(M)
+
+# make the second phenotype discrete
+phenotypes[:,2] = phenotypes[:,2] .> median(phenotypes[:,2])
+
+# store the phenotypes in a dataframe
+dph = DataFrame(phenotypes, [:Ph1, :Ph2, :Ph3])
+
+# write the phenotypes to a file
+CSV.write(datadir("processed","findr-data-geuvadis", "PC_phenotypes.csv"), dph)
+
 # for each target set, compute the first principal component of the target set and correlate it with the first three principal components of the full matrix
 for k in eachindex(gdf)
     if nrow(gdf[k]) >= 10  && nrow(gdf[k]) < 1000
@@ -74,7 +86,7 @@ for k in eachindex(gdf)
         Yt_tgt = Yt[:,findall(x -> x in tgts, names(dt))]
         M_tgt = fit(PCA, Yt_tgt; maxoutdim=1)
         # compute the correlations
-        cc = cor(projection(M_tgt), projection( M))
+        cc = cor(projection(M_tgt), phenotypes)
         println(gdf[k].Source[1], "\t", length(tgts), "\t", cc)
     end
 end
