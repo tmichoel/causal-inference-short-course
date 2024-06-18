@@ -23,4 +23,3 @@ intersect(TFs, TF_validated)
 # find the locations of the intersection of the TFs and TF validated in the validated TFs
 idx = findall(x -> x in TFs, TF_validated)
 names(df)[idx]
-
