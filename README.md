@@ -45,10 +45,17 @@ To run the notebooks, you have two options:
 
 ### Fork the repository
 
-[Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository. Make sure to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) regularly to make sure it remains up-to-date! 
+[Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the repository.
 
 > [!TIP]
 > Before you do anything else, it is recommended to **make a copy of the notebook files**. Keep the original ones untouched and only work in your copies. This will avoid conflicts between your and my changes when you [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+
+> [!IMPORTANT]  
+> Irrespective whether you choose to use the Codespace solution or local installation, it is important to keep your project up-to-date:
+>
+> - Regularly [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
+> - Regularly use the [Julia package maneger](https://pkgdocs.julialang.org/) to [update the project dependencies](https://pkgdocs.julialang.org/v1/managing-packages/#updating)
+
 
 
 ### Using Github Codespaces
