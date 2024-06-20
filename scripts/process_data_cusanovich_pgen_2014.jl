@@ -23,3 +23,10 @@ intersect(TFs, TF_validated)
 # find the locations of the intersection of the TFs and TF validated in the validated TFs
 idx = findall(x -> x in TFs, TF_validated)
 names(df)[idx]
+
+# read dP_reg.csv in a dataframa
+dP_reg = DataFrame(CSV.File(datadir("results","findr-data-geuvadis", "dP_reg.csv")))
+
+# for each source in dP_reg, counts its number of targets
+gdf = groupby(dP_reg, :Source)
+cdf = unstack(sort!(combine(gdf, nrow),:nrow, rev=true), :Source, :nrow)

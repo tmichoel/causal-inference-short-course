@@ -10,6 +10,7 @@ using BioFindr
 using Printf
 using Statistics
 using MultivariateStats
+using Distributions
 using Graphs
 
 # Load data
